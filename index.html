@@ -4,90 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HEEJU</title>
-    <style>
-        /* 기본 스타일 */
-        body, html {
-            margin: 0;
-            padding: 0;
-            width: 100%;
-            height: 100%;
-            overflow: hidden;
-            background: linear-gradient(135deg, #ff9a9e, #fad0c4, #fbc2eb, #a6c1ee);
-            background-size: 400% 400%;
-            animation: gradientAnimation 10s infinite alternate;
-        }
-
-        @keyframes gradientAnimation {
-            0% { background-position: 0% 0%; }
-            100% { background-position: 100% 100%; }
-        }
-
-        /* 움직이는 별 스타일 */
-        .star {
-            position: absolute;
-            width: 10px;
-            height: 10px;
-            background-color: white;
-            border-radius: 50%;
-            box-shadow: 0 0 10px white;
-            animation: twinkle 2s infinite ease-in-out, fall 5s infinite linear;
-        }
-
-        @keyframes twinkle {
-            0%, 100% { opacity: 1; transform: scale(1); }
-            50% { opacity: 0.3; transform: scale(0.7); }
-        }
-
-        @keyframes fall {
-            0% { transform: translateY(-10vh); }
-            100% { transform: translateY(110vh); }
-        }
-
-        /* 중앙 텍스트 스타일 */
-        h1 {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            font-family: Arial, sans-serif;
-            font-size: 4rem;
-            color: white;
-            text-shadow: 0 0 10px #000, 0 0 20px #ff9a9e;
-            animation: glow 2s infinite alternate;
-        }
-
-        @keyframes glow {
-            0% { text-shadow: 0 0 10px #ff9a9e, 0 0 20px #fad0c4; }
-            100% { text-shadow: 0 0 20px #fbc2eb, 0 0 30px #a6c1ee; }
-        }
-    </style>
 </head>
 <body>
-    <!-- 메인 타이틀 -->
-    <h1>Welcome to Fun Animation!</h1>
-
-    <script>
-        // 랜덤한 별(스타) 요소 생성
-        function createStar() {
-            const star = document.createElement('div');
-            star.classList.add('star');
-
-            // 랜덤 위치 설정
-            star.style.left = Math.random() * 100 + 'vw';
-            star.style.top = Math.random() * -100 + 'vh';
-            star.style.animationDelay = Math.random() * 5 + 's';
-
-            // 화면에 추가
-            document.body.appendChild(star);
-
-            // 애니메이션 후 별 제거
-            setTimeout(() => {
-                star.remove();
-            }, 5000);
-        }
-
-        // 별을 지속적으로 생성
-        setInterval(createStar, 100);
-    </script>
+    <h1>안녕하세요. 저는 이희주입니다.</h1>
+    <hr style="border: none; height: 3px; background-color: blue; width: 70%; margin: 20px auto;">
+    <h3>HTML에 관련해 간단한 팁이 있습니다.</h3>
+    <div style="width: 100%; height: 2px; background-color: red; margin: 20px 0;"></div>
+    <h5>h1*n을 하면 h1이 n개나 늘어납니다.</h5>
+    <h5>h$*n를 하면 h1~n개 만큼 늘어납니다.</h5>
+    <h5>감사합니다.</h5>
 </body>
 </html>
